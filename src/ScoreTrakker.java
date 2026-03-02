@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+// Julia Kolomiitseva and Will Drescher
+// The ScoreTrakker class reads student names and scores from text files,
+// stores them in an ArrayList, and prints them in alphabetical order.
+// It handles two types of errors: missing files and non-numeric scores.
+// If a score is not a valid number, it prints an error message and continues.
+// The main method runs the program by processing multiple files.
 public class ScoreTrakker {
 
     private ArrayList<Student> students = new ArrayList<Student>();
