@@ -42,7 +42,8 @@ public class ScoreTrakker {
                 students.add(s);
 
             } catch (NumberFormatException e) {
-                System.out.println("Non-numeric score for " + name + ": " + scoreLine);
+                System.out.println("Incorrect format for " + name + " not a valid score: " + scoreLine);
+                System.out.println();
             }
         }
 
@@ -51,6 +52,7 @@ public class ScoreTrakker {
 
     public void printInOrder() {
         Collections.sort(students);
+        System.out.println("Student Score List");
         for (Student s : students) {
             System.out.println(s);
         }
@@ -60,11 +62,11 @@ public class ScoreTrakker {
     public void processFiles() {
         for (String filename : files) {
             try {
-                System.out.println("Reading from file: " + filename);
+                //System.out.println("file: " + filename);
                 loadDataFile(filename);
                 printInOrder();
             } catch (FileNotFoundException e) {
-                System.out.println("Cannot find file " + filename);
+                System.out.println("Can't open file: " + filename);
                 System.out.println();
             }
         }
